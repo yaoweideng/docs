@@ -1,0 +1,208 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+
+\begin{document}
+\ \\
+Wei Deng\\
+Stat 452\\
+Homework 1\\
+1/29/20\\
+\ \\
+\begin{enumerate}
+    %problem 1
+    \item
+    $\begin{aligned}[t]
+    Cov(X+Z,Y)&=E[(X+Z)Y]-E(X+Z)E(Y)\\
+    &=E[XY+ZY]-E(X+Z)E(Y)\\
+    &=E(XY)+E(ZY)-E(X+Z)E(Y)\\
+    &=E(XY)+E(ZY)-E(X)E(Y)-E(Z)E(Y)\\
+    &=[E(XY)-E(X)E(Y)]+[E(ZY)-E(Z)E(Y)]\\
+    &=Cov(X,Y)+Cov(Z,Y)
+    \end{aligned}$\\
+    \ \\
+    
+    %problem 2
+    \item
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}(X_i-\overline{X})^2&=(X_1-\overline{X})^2+(X_2-\overline{X})^2+(X_3-\overline{X})^2+...+(X_n-\overline{X})^2\\
+    &=(X_1^2-2X_1\overline{X}^2+\overline{X}^2)+(X_2^2-2X_2\overline{X}^2+\overline{X}^2)+(X_3^2-2X_3\overline{X}^2+\overline{X}^2)+...+(X_n^2-2X_n\overline{X}^2+\overline{X}^2)\\
+    &=\sum_{i=1}^{n}X_i^2-\sum_{i=1}^{n}2X_i\overline{X}+n\overline{X}^2\\
+    \end{aligned}$
+    \ \\
+    \\We know that $\displaystyle{\overline{X}=\frac{\sum\limits_{i=1}^{n}X_i}{n}}$. Then, we have:\\
+    \ \\
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}2X_i\overline{X}&=2\overline{X}n\sum_{i=1}^{n}\frac{X_i}{n}\\
+    &=2n\overline{X}\overline{X}\\
+    &=2n\overline{X}^2.
+    \end{aligned}$
+    \ \\
+    \\So,\\
+    \ \\
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}X_i^2-\sum_{i=1}^{n}2X_i\overline{X}+n\overline{X}^2&=
+    \sum_{i=1}^{n}X_i^2-2n\overline{X}^2+n\overline{X}^2\\
+    &=\sum_{i=1}^{n}X_i^2-n\overline{X}^2.\\
+    \ \\
+    \end{aligned}$
+    
+    %problem 3
+    \item
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}(X_i-\overline{X})&=(X_1-\overline{X})+(X_2-\overline{X})+(X_3-\overline{X})+...+(X_n-\overline{X})\\
+    &=\sum_{i=1}^{n}X_i-n\overline{X}\\
+    &=\sum_{i=1}^{n}X_i-n\sum_{i=1}^{n}\frac{X_i}{n}\\
+    &=\sum_{i=1}^{n}X_i-\sum_{i=1}^{n}X_i\\
+    &=0\\
+    \ \\
+    \ \\
+    \ \\
+    \ \\
+    \end{aligned}$
+    
+    %problem 4
+    \item
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}(X_i-\mu)^2&=(X_1-\mu)^2+(X_2-\mu)^2+(X_3-\mu)^2+...+(X_n-\mu)^2\\
+    &=(X_1^2-2X_1\mu+\mu^2)+(X_2^2-2X_2\mu+\mu^2)+(X_3^2-2X_3\mu+\mu^2)+...+(X_n^2-2X_n\mu+\mu^2)\\
+    &=\sum_{i=1}^{n}X_i^2-\sum_{i=1}^{n}2X_i\mu+n\mu^2\\
+    \ \\
+    \end{aligned}$
+    \\We know that $\displaystyle{\sum_{i=1}^{n}(X_i-\overline{X})^2=\sum_{i=1}^{n}X_i^2-n\overline{X}^2}$. So,\\
+    \ \\
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}(X_i-\mu)^2-\sum_{i=1}^{n}(X_i-\overline{X})^2&=\sum_{i=1}^{n}X_i^2-\sum_{i=1}^{n}2X_i\mu+n\mu^2-(\sum_{i=1}^{n}X_i^2-n\overline{X}^2)\\
+    &=-\sum_{i=1}^{n}2X_i\mu+n\mu^2+n\overline{X}^2.\\
+    \ \\
+    \end{aligned}$
+    \\Then,\\
+    \ \\
+    $\begin{aligned}[t]
+    -\sum_{i=1}^{n}2X_i\mu&=-2\mu\sum_{i=1}^{n}X_i\\
+    &=-2\mu n\sum_{i=1}^{n}\frac{X_i}{n}\\
+    &=-2\mu n\overline{X}.\\
+    \ \\
+    \end{aligned}$
+    \\Now, we have:\\
+    \ \\
+    $\begin{aligned}[t]
+    \sum_{i=1}^{n}(X_i-\mu)^2-\sum_{i=1}^{n}(X_i-\overline{X})^2&=-2\mu n\overline{X}+n\mu^2+n\overline{X}^2\\
+    &=n(\overline{X}^2-2\mu\overline{X}+\mu^2)\\
+    &=n(\overline{X}-\mu)^2.\\
+    \ \\
+    \end{aligned}$
+    \\So, $\displaystyle{\sum_{i=1}^{n}(X_i-\mu)^2-\sum_{i=1}^{n}(X_i-\overline{X})^2=n(\overline{X}-\mu)^2}$, and\\
+    \ \\
+    $\displaystyle{\sum_{i=1}^{n}(X_i-\mu)^2=\sum_{i=1}^{n}(X_i-\overline{X})^2+n(\overline{X}-\mu)^2}$.\\
+    \ \\
+    
+    %problem 5
+    \item
+    $\begin{aligned}[t]
+    Var(X)&=Cov(X,X)\\
+    &=E(XX)-E(X)E(X)\\
+    &=E(X^2)-[E(X)]^2\\
+    &=E(X^2)-\mu^2\\
+    \ \\
+    \end{aligned}$
+    
+    %problem 6
+    \item
+    $\begin{aligned}[t]
+    Y_i=a+bX_i&\implies\displaystyle{\sum_{i=1}^{n}Y_i=\sum_{i=1}^{n}(a+bX_i)}\\
+    &\implies\frac{1}{n}\sum_{i=1}^{n}Y_i=\frac{1}{n}\sum_{i=1}^{n}(a+bX_i)\\
+    &\implies\overline{Y}=a+b\overline{X}
+    \ \\
+    \end{aligned}$
+    \ \\
+    \ \\
+    $\begin{aligned}[t]
+    Y_i=a+bX_i&\implies Var(Y)=Var(a+bX)\\
+    &\implies Var(a)+Var(bX)\\
+    &=0+b^2Var(X)\\
+    &=b^2Var(X)\\
+    \ \\
+    \end{aligned}$
+    
+    %problem 7
+    \item
+    \begin{proof}
+        $\begin{aligned}[t]
+            Cov(aX,bY)&=E(aXbY)-E(aX)E(bY)\\
+            &=abE(XY)-abE(X)E(Y)\\
+            &=ab[E(XY)-E(X)(Y)]\\
+            &=abCov(X,Y)\\
+        \end{aligned}$
+    \ \\
+    \end{proof}
+    
+    %problem 8
+    \item
+    First, we will prove $\displaystyle{E(\sum_{i=1}^{n}X_i)=\sum_{i=1}^{n}(E(X_i))}$.\\
+    \begin{proof}
+        We will prove using induction.\\
+        \underline{Base case}: For $n=1$, we have $E(X_1)=E(X_1)$. So, the base case holds.\\
+        \underline{Inductive hypothesis}: Suppose that $\displaystyle{E(\sum_{i=1}^{n}X_i)=\sum_{i=1}^{n}(E(X_i))}$.
+        Then,\\
+        \ \\
+        $\begin{aligned}[t]
+        E(\sum_{i=1}^{n+1}X_i)&=E(\sum_{i=1}^{n}X_i+X_{n+1})\\
+        &= E(\sum_{i=1}^{n}X_i)+E(X_{n+1})\\
+        &=\sum_{i=1}^{n}E(X_i)+E(X_{n+1})\\
+        &=\sum_{i=1}^{n+1}E(X_i).\\
+        \end{aligned}$
+        \ \\
+        Thus, $\displaystyle{E(\sum_{i=1}^{n}X_i)=\sum_{i=1}^{n}(E(X_i))}$, by induction.\\
+    \end{proof}
+    \ \\
+    Next, we will show that $\displaystyle{Cov(\sum_{i=1}^{n}X_i,Y)=\sum_{i=1}^{n}Cov(X_i,Y)}$.\\
+    \ \\
+    $\begin{aligned}[t]
+        Cov(\sum_{i=1}^{n}X_i,Y)&=E((\sum_{i=1}^{n}X_i)Y)-E(\sum_{i=1}^{n}X_i)E(Y)\\
+        &=E(\sum_{i=1}^{n}X_iY)-E(\sum_{i=1}^{n}X_i)E(Y)\\
+        &=\sum_{i=1}^{n}E(X_iY)-(\sum_{i=1}^{n}E(X_i))E(Y)\\
+        &=\sum_{i=1}^{n}E(X_iY)-\sum_{i=1}^{n}(E(X_i)E(Y))\\
+        &=\sum_{i=1}^{n}[E(X_iY)-E(X_i)E(Y)]\\
+        &=\sum_{i=1}^{n}Cov(X_i,Y)\\
+    \end{aligned}$
+    \ \\
+    \\Note that $Cov(X,Y)=Cov(Y,X)$, which applies to this property.
+    \ \\
+    \\Using the property we just proved, we will now show $\displaystyle{Cov(\sum_{i=1}^{n}X_i,\sum_{j=1}^{m}Y_j)=\sum_{i=1}^{n}\sum_{j=1}^{m}Cov(X_i,Y_j)}$.\\
+    $\begin{aligned}[t]
+        Cov(\sum_{i=1}^{n}X_i,\sum_{j=1}^{m}Y_j)&=\sum_{i=1}^{n}Cov(X_i,\sum_{j=1}^{m}Y_j)\\
+        &=\sum_{i=1}^{n}\sum_{j=1}^{m}Cov(X_i,Y_j)\\
+        \ \\
+    \end{aligned}$
+    \ \\
+    
+    %problem 9
+    \item
+    a) By the property shown in problem #1:\\
+    $\begin{aligned}[t]
+    Cov(2X+3Y-Z,X+Y)&=Cov(2X,X)+Cov(2X,Y)+Cov(3Y,X)+Cov(3Y,Y)+Cov(-Z,X)+Cov(-Z,Y)\\
+    &=2Cov(X,X)+2Cov(X,Y)+3Cov(Y,X)+3Cov(Y,Y)-Cov(Z,X)-Cov(Z,Y)\\
+    &=2Var(X)+2Cov(X,Y)+3Cov(Y,X)+3Var(Y)-Cov(Z,X)-Cov(Z,Y)\\
+    &=2(0.4)+2(0.2)+3(0.2)+3(0.5)-0.1-0.3\\
+    &=2.9\\
+    \ \\
+    \end{aligned}$
+    \ \\
+    b)
+    $\begin{aligned}[t]
+        Var(2X+3Y-Z)&=Cov(2X+3Y-Z,2X+3Y-Z)\\
+        &=Cov(2X,2X)+Cov(2X,3Y)+Cov(2X,-Z)+Cov(3Y,2X)+Cov(3Y,3Y)+Cov(3Y,-Z)\\&+Cov(-Z,2X)+Cov(-Z,3Y)+Cov(-Z,-Z)\\
+        \ \\
+        &=4Var(X)+6Cov(X,Y)-2Cov(X,Z)+6Cov(Y,X)+9Var(Y)-3Cov(Y,Z)-2Cov(Z,X)\\&-3Cov(Z,Y)+Var(Z)\\
+        \ \\
+        &=4(0.4)+6(0.2)-2(0.1)+6(0.2)+9(0.5)-3(0.3)-2(0.1)-3(0.3)+0.6\\
+        &=6.9\\
+    \end{aligned}$
+\end{enumerate}
+\end{document}
